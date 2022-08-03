@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+        <!-- PAGE TITLE
+        ================================================== -->
+        <section class="page-title-section bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4" data-background='{% static "img/banner/page-title-01.jpg" %}'>
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <h1 class="text-animation" data-in-effect="fadeInRight">Tables</h1>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#!">Tables</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="position-absolute z-index-1 right bottom-n5 opacity2 ani-left-right">
+                <span class="square bg-primary"></span>
+                <span class="square bg-secondary"></span>
+            </div>
+        </section>
+
+        <!-- TABLE
+        ================================================== -->
+        <section class="wow fadeIn" data-wow-delay="200ms">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-center mb-4 mb-md-5">Bordered Table</h2>
+                        <div class="table-responsive">
+                            <table class="table table-bordered mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Firstname</th>
+                                        <th>Lastname</th>
+                                        <th>Email</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>john@example.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mary</td>
+                                        <td>Moe</td>
+                                        <td>mary@example.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>July</td>
+                                        <td>Dooley</td>
+                                        <td>july@example.com</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TABLE
+        ================================================== -->
+        <section class="bg-light wow fadeIn" data-wow-delay="400ms">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-center mb-4 mb-md-5">Dark Striped Table</h2>
+                        <div class="table-responsive">
+                            <table class="table table-dark table-striped mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Firstname</th>
+                                        <th>Lastname</th>
+                                        <th>Email</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>john@example.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mary</td>
+                                        <td>Moe</td>
+                                        <td>mary@example.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>July</td>
+                                        <td>Dooley</td>
+                                        <td>july@example.com</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TABLE
+        ================================================== -->
+        <section class="wow fadeIn" data-wow-delay="600ms">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-center mb-4 mb-md-5">Responsive Table</h2>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Firstname</th>
+                                        <th>Lastname</th>
+                                        <th>Age</th>
+                                        <th>City</th>
+                                        <th>Country</th>
+                                        <th>Sex</th>
+                                        <th>Example</th>
+                                        <th>Example</th>
+                                        <th>Example</th>
+                                        <th>Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Anna</td>
+                                        <td>Pitt</td>
+                                        <td>35</td>
+                                        <td>New York</td>
+                                        <td>USA</td>
+                                        <td>Female</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Annaya</td>
+                                        <td>Pitt</td>
+                                        <td>35</td>
+                                        <td>New York</td>
+                                        <td>USA</td>
+                                        <td>Female</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Annali</td>
+                                        <td>Pitt</td>
+                                        <td>35</td>
+                                        <td>New York</td>
+                                        <td>USA</td>
+                                        <td>Female</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {% endblock %}

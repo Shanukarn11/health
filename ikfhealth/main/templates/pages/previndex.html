@@ -1,0 +1,486 @@
+
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+
+
+        <!-- BANNER
+    ================================================== -->
+        <section class="p-0 main-banner">
+            <div class="px-lg-1-6 px-xl-2-0 px-xxl-8">
+                <div class="slider-fade owl-carousel owl-theme w-100 alt-font">
+                    {%for banner in banners%}
+
+                    <div class="text-start item bg-img cover-background pt-6 pb-14 py-md-16 py-lg-20 py-xxl-24 rounded-lg main-font" data-overlay-dark="6" data-background="{{banner.pic}}">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mb-1-9 mb-lg-0 py-5">
+                                    <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font text-animations mb-3" data-in-effect="fadeInRight">{{banner.heading}}</span>
+                                    <h1>{{banner.description}}</h1>
+                                    <a href="#!" class="butn medium">{{learn_more}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {%endfor%}
+
+                    {% comment %} <div class="text-start item bg-img cover-background pt-6 pb-14 py-md-16 py-lg-20 py-xxl-24 rounded-lg main-font" data-overlay-dark="6" data-background="{% static 'img/banner/slide2.jpg' %}">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mb-1-9 mb-lg-0 py-5">
+                                    <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font text-animations mb-3" data-in-effect="fadeInRight">{{home_banner_label_2_heading}}</span>
+                                    <h1>{{home_banner_label_2}}</h1>
+                                    <a href="#!" class="butn medium">{{learn_more}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> {% endcomment %}
+
+
+
+                </div>
+            </div>
+        </section>
+        <!-- Placeholder Content can be added using Toggle button on top-right corner -> Using this add more content blocks on website. Just remember to change the numbering of the block content and the placeholder content.
+    ================================================== -->
+        <br />
+        <center>
+            {% comment %} {% block content %}
+                {% placeholder "content" %}
+            {% endblock content %} {% endcomment %}
+        </center>
+        
+        <!-- ABOUT
+    ================================================== -->
+        <section>
+            <div class="container">
+                <div class="section-heading">
+                    <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">{{our_flagship_project}}</span>
+                    <h2>{{project_name}}</h2>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-7 mb-1-9 mb-md-2-9 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
+                        <div class="about-us pe-lg-5">
+                            <div class="text-center text-md-end">
+                                <img src="{{homeimages.home_about_front_image}}" class="rounded tilt" alt="...">
+                            </div>
+                            <img src="{{homeimages.home_about_second_image}}" class="about-img rounded tilt d-none d-md-inline-block" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-lg-5 wow fadeIn" data-wow-delay="400ms">
+                        <div class="ps-xl-8">
+                            <div class="section-heading mb-4 text-start">
+                                <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">{{about_us}}</span>
+                                <!-- <h2 class="mb-0">{{about_us_digitalizing_india_text}}</h2> -->
+                            </div>
+                            <p>{{about_us_digitalizing_description}} </p>
+                            <a href="#!" class="butn-read"><span>Read More</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="{% static 'img/icons/icon-7.png' %}" alt="" class="position-absolute left-5 top-15 ani-top-bottom opacity7 d-none d-lg-block">
+            <img src="{% static 'img/icons/icon-8.png' %}" alt="" class="position-absolute right-5 top-75 ani-top-bottom opacity7 d-none d-lg-block">
+        </section>
+
+        <!-- OUR MISSION
+        ================================================== -->
+        <section>
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">{{our_flagship_project}}</span>
+                    <h2>{{project_name}}</h2>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-5 mb-1-9 mb-md-2-5 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
+                        <div>
+                            <div class="section-heading  mb-3 mb-lg-4 text-start">
+                                <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">mission</span>
+                                <h2>Our mission</h2>
+                            </div>
+                            <p class="display-29 display-lg-28 font-weight-400 mb-1-6 mb-lg-2-3">It is our noble mission to serve the citizens of India and our Mobile Application developers with a unique and ingenious technological solution, which helps the common people in rural India move towards digital inclusion in the truest sense. Our primary goal is to reach to the last person in the chain through the power of digitalization. India is a very diverse country and we intend to create digital foot soldiers in order to empower the communities which will create a chain reaction of economic and social upliftment.</p>
+                            <a href="#!" class="butn small">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-xl-1">
+                        <div class="row">
+                            <div class="col-6 px-1 wow fadeInUp" data-wow-delay="400ms">
+                                <img src="{% static 'img/content/about-3.jpg' %}" class="tilt rounded" alt="...">
+                            </div>
+                            <div class="col-6 px-1 wow fadeInUp" data-wow-delay="500ms">
+                                <img src="{% static 'img/content/about-4.jpg' %}" class="tilt rounded" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="{% static 'img/icons/icon-7.png' %}" alt="" class="position-absolute left-5 top-15 ani-top-bottom opacity7 d-none d-lg-block">
+        </section>
+
+        <!-- OUR VISION
+        ================================================== -->
+        <section class="pt-0">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-2 order-lg-1 wow fadeIn" data-wow-delay="200ms">
+                        <div class="position-relative">
+                            <img src="{% static 'img/content/about-5.jpg' %}" class="tilt rounded" alt="...">
+                            <div class="position-absolute top-50 start-50 translate-middle">
+                            <div class="d-inline-block align-middle">
+                                <a class="video_btn-style1 popup-social-video video_btn small" href="https://www.youtube.com/watch?v=xHegpKx61eE"><i class="fas fa-play"></i></a>
+                            </div>
+                            <div class="d-none d-sm-inline-block align-middle font-weight-700 ms-4 text-white text-start">Watch <span class="text-uppercase d-block">intro video</span></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-lg-5 offset-xl-1 order-1 order-lg-2 mb-1-9 mb-md-2-5 mb-lg-0 wow fadeIn" data-wow-delay="400ms">
+                        <div>
+                            <div class="section-heading mb-3 mb-lg-4 text-start">
+                                <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">vision</span>
+                                <h2>Our vision</h2>
+                            </div>
+                            <p class="display-29 display-lg-28 mb-1-6 mb-lg-2-3">The founder of Anant Computing – <b>Phani Bhushan</b> believes digital divide in India is more detrimental than its economic divide. He wants the youth of the country to get out of the colonial mindset hangover and contribute towards nation building. His vision is that digital revolution is quite possible even without the complete economic transformation or makeover of the masses. We, at Anant Computing believe that change can be brought in the existing ecosystem by upgrading the technology that runs our mobile apps. Our Vision is to bridge the digital divide by dissolving various barriers and enabling digital consumption of mobile applications for the Indian masses.</p>
+                            <a href="#!" class="butn secondary small">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="{% static 'img/icons/icon-8.png' %}" alt="" class="position-absolute right-5 top-75 ani-top-bottom opacity7 d-none d-lg-block">
+        </section>
+
+        <!-- CAUSES
+    ================================================== -->
+        <section class="pt-1-6 pt-lg-14 bg-img cover-background" data-background="{% static 'img/content/map-bg.jpg' %}">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">{{our_courses}}</span>
+                    <h2>{{popular_courses}}</h2>
+                </div>
+                <div class="row mt-n1-9">
+                    {% for course in courses %}
+                    <div class="col-md-6 col-lg-4 mt-1-9 wow fadeIn" data-wow-delay="200ms">
+                        <div class="card card-style1 border-color-extra-light-gray h-100">
+                            {% comment %} <img src="{% static 'img/causes/causes-01.jpg' %}" class="card-img-top" alt="..."> {% endcomment %}
+                            <img src="{{ course.pic }}" class="card-img-top" alt="...">
+                            <div class="card-body px-1-6 px-sm-1-9 pb-1-9 pt-2-4 position-relative">
+                                <a href="#!" class="card-btn">Sign up</a>
+                                <h3 class="h4 mb-3"><a href="{% static 'causes-detail.html' %}">{{course.heading}}</a></h3>
+                                <p class="mb-1-9">{{course.description}}</p>
+                                <div class="skills mb-1-9">
+                                    <div class="skills-progress">
+                                        <span data-value='50%'></span>
+                                    </div>
+                                </div>
+                                <a href="#!" class="butn-read"><span>Read More</span></a>
+                            </div>
+                            <div class="d-flex justify-content-between py-3 px-1-6 px-sm-1-9 bg-white card-footer">
+                                <p class="mb-0">
+                                    <label class="mb-0 font-weight-700">Raised:</label> <span class="text-primary">$13000</span>
+                                </p>
+                                <p class="mb-0">
+                                    <label class="mb-0 font-weight-700">Goal:</label> <span class="text-primary">$6400</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+ 
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- COUNTER
+    ================================================== -->
+        <section class="bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4" data-background="{% static 'img/bg/bg-1.jpg' %}">
+            <div class="container">
+                <div class="section-heading text-start">
+                    <span class="d-block text-secondary display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">{{our_statistics}}</span>
+                    <h2 class="mb-0 text-white">{{statistics_heading}}</h2>
+                </div>
+                <div class="row mt-n1-9">
+                    {% for stats in statistic %}
+                    <div class="col-md-6 col-lg-3 mt-1-9 wow fadeIn" data-wow-delay="200ms">
+                        <div class="counter-style1 bg-primary">
+                            <div class="counter-text">
+                                <span class="countup mb-0 h1 text-white">
+                                    356
+                                </span>
+                            </div>
+                            <p class="display-28 letter-spacing-1 mb-0 text-white">{{stats.heading}}</p>
+                        </div>
+                    </div>
+                    {% endfor%}
+                    <!-- <div class="col-md-6 col-lg-3 mt-1-9 wow fadeIn" data-wow-delay="400ms">
+                        <div class="counter-style1 bg-secondary">
+                            <div class="counter-text">
+                                <span class="countup mb-0 h1 text-white">
+                                    149
+                                </span>
+                            </div>
+                            <p class="display-28 letter-spacing-1 mb-0 text-dark">Dedicated Volunteers</p>
+                        </div>
+                    </div>
+                   
+                    <div class="col-md-6 col-lg-3 mt-1-9 wow fadeIn" data-wow-delay="800ms">
+                        <div class="become-volunteer text-center">
+                            <i class="ti-plus mx-auto text-white"></i>
+                            <h4 class="display-28 letter-spacing-1 mb-0 text-white">Become a Volunteer</h4>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES
+    ================================================== -->
+        <section>
+            <div class="container">
+                <div class="section-heading">
+                    <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">{{our_services}}</span>
+                    <h2>{{our_services_heading_what_we_do}}</h2>
+                </div>
+                <div class="row mt-n1-9">
+                    {% for service in services %}
+                    <div class="col-lg-4 col-md-6 mt-1-9 wow fadeIn" data-wow-delay="200ms">
+                        <div class="card card-style2 border-0">
+                            <div class="card-body px-1-6 px-sm-1-9 py-1-9">
+                                <div class="mb-1-6">
+                                    <img src="{{service.pic}}" alt="...">
+                                </div>
+                                <div>
+                                    <h3 class="h4 mb-3"><a href="#!">{{service.heading}}</a></h3>
+                                    <p class="mb-1-6">{{service.description}}</p>
+                                    <a href="#!" class="butn-read"><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <!-- <div class="col-lg-4 col-md-6 mt-1-9 wow fadeIn" data-wow-delay="400ms">
+                        <div class="card card-style2 border-0">
+                            <div class="card-body px-1-6 px-sm-1-9 py-1-9">
+                                <div class="mb-1-6">
+                                    <img src="{% static 'img/icons/icon-2.png' %}" alt="...">
+                                </div>
+                                <div>
+                                    <h3 class="h4 mb-3"><a href="#!">Medical Facilities</a></h3>
+                                    <p class="mb-1-6">Willful giving of help to those out of luck, as a demonstration. There are various methods of reasoning about foundation.</p>
+                                    <a href="#!" class="butn-read"><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+            <img src="{% static 'img/icons/icon-9.png' %}" alt="" class="position-absolute right-5 top-75 ani-top-bottom opacity7 d-none d-lg-block">
+        </section>
+
+        <!-- EVENT
+    ================================================== -->
+        <section class="pt-0">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">{{upcoming_events}}</span>
+                    <h2>{{our_events}}</h2>
+                </div>
+                <div class="row justify-content-center">
+                    {% for event in events%}
+                    <div class="col-lg-6 col-md-12 order-lg-1 order-2 pe-lg-4">
+                        <div class="bg-light p-4 mb-1-9 wow fadeInUp" data-wow-delay="200ms">
+                            <div class="media">
+                                <div class="rounded text-center bg-primary py-3 px-4">
+                                    <span class="font-weight-600 text-white mb-0 d-block h4 lh-1">{{event.attr1}}</span>
+                                    <span class="text-white">{{event.attr2}}</span>
+                                </div>
+                                <div class="ps-1-6 align-self-center media-body">
+                                    <div class="text-secondary small font-weight-600"><i class="ti-time me-1"></i>{{event.attr3}}</div>
+                                    <h4 class="h5"><a href="#!">{{event.heading}}</a></h4>
+                                    <p class="mb-0">{{event.description}}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    {% endfor %}
+                    <!-- <div class="col-lg-6 col-md-12 order-lg-2 order-1 mb-1-9 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
+                        <div class="card card-style1 border-color-extra-light-gray h-100">
+                            <img src="{% static 'img/event/event-1.jpg' %}" class="card-img-top" alt="...">
+                            <div class="card-body px-1-6 px-sm-1-9 pb-1-9 pt-2-4 position-relative">
+                                <span class="card-btn">03 Mar.</span>
+                                <div class="mb-2 text-secondary small font-weight-600"><i class="ti-time me-1"></i> 02:00 pm - 05:00 pm</div>
+                                <h3 class="h4 mb-3"><a href="{% static 'causes-detail.html' %}">Everyone let’s run for the humanity</a></h3>
+                                <p>The core of lets run the race is to look for opportunity for anybody trapped in bondage. It additionally appears to bring issues to light for issues of common freedoms.</p>
+                                <a href="#!" class="butn-read"><span>Read More</span></a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CLIENTS
+    ================================================== -->
+        <section class="py-5 wow fadeIn bg-secondary mx-lg-4 mx-xl-6 rounded-lg" data-wow-delay="100ms">
+            <div class="container-fluid px-md-8 px-lg-10 px-xl-14">
+                <div class="owl-carousel owl-theme client-style1 text-center">
+                    {% for client in clients %}
+                    <div class="image-wrapper">
+                        <img class="hover-image" src="{{client.pic}}" alt="...">
+                        <img class="main-image" src="{{client.pic}}" alt="...">
+                    </div>
+                    {% endfor %}
+                   
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIAL
+    ================================================== -->
+        <section>
+            <div class="container">
+                <div class="section-heading">
+                    <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">{{testimonials_text}}</span>
+                    <h2>{{people_talk}}</h2>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-xl-7 text-center">
+                        <div class="testimonial-carousel owl-carousel owl-theme">
+                            {% for testimony in testimonials %}
+                            <div>
+                                <i class="ti-quote-left display-10 text-primary"></i>
+                                <p class="mt-3 mb-5 display-28 display-md-26 display-lg-24">{{testimony.description}}</p>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <div class="me-3">
+                                        <img src="{{testimony.pic}}" class="rounded-circle" alt="...">
+                                    </div>
+                                    <div class="text-start">
+                                        <h6 class="mb-0">{{testimony.name}}</h6>
+                                        <span class="small">{{testimony.heading}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                          
+                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="{% static 'img/icons/icon-7.png' %}" alt="" class="position-absolute left-5 top-15 ani-top-bottom opacity7 d-none d-sm-block">
+            <img src="{% static 'img/icons/icon-8.png' %}" alt="" class="position-absolute right-5 top-75 ani-top-bottom opacity7">
+        </section>
+
+        <!-- Team
+    ================================================== -->
+        <section class="pt-0">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">{{our_team}}</span>
+                    <h2>{{our_team_heading}}</h2>
+                </div>
+                <div class="row mt-n1-9">
+                    {%for team in teams %}
+                    <div class="col-md-6 col-lg-4 mt-1-9 wow fadeIn" data-wow-delay="200ms">
+                        <div class="position-relative team-style1">
+                            <div class="team-img">
+                                <a href="#!"><img src="{{team.pic}}" alt="..."></a>
+                                <div class="team-overlay"></div>
+                            </div>
+                            <div class="team-content text-center">
+                                <h3 class="text-white h4">{{team.name}}</h3>
+                                <p class="text-white opacity7 mb-2">{{team.heading}}</p>
+                                <ul class="social-icon-style1">
+                                    <li><a href="{{team.attr1}}"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="{{team.attr2}}"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="{{team.attr3}}"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="{{team.attr4}}"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION
+    ================================================== -->
+        <section class="bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg wow fadeIn" data-wow-delay="200ms" data-background="{{homeimages.middle_heading_we_are_to_create }}" data-overlay-dark="6">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-lg-8">
+                        <h2 class="text-white display-16 display-sm-11 display-md-9 display-lg-5 mb-1-9">{{middle_heading_we_are_to_create}}</h2>
+                        <!-- <a href="{% static 'donate-now.html' %}" class="butn secondary">Donate Now</a> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG
+    ================================================== -->
+        <section>
+            <div class="container">
+                <div class="section-heading">
+                    <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">{{our_blogs}}</span>
+                    <h2>{{latest_news}}</h2>
+                </div>
+                <div class="row mt-n1-9">
+                    {% for blog in blogs %}
+                    <div class="col-md-6 col-lg-4 mt-1-9 wow fadeIn" data-wow-delay="200ms">
+                        <article class="card card-style3 border-color-extra-light-gray h-100">
+                            <div class="card-img">
+                                <img src="{{blog.pic}}" alt="...">
+                                <div class="author-info">
+                                    <div class="author-img">
+                                        <img src="{{blog.pic}}" alt="...">
+                                    </div>
+                                    <span class="display-30 text-white">{{blog.name}}</span>
+                                </div>
+                            </div>
+                            <div class="card-body px-1-6 px-sm-1-9 py-2-3">
+                                <h3 class="font-weight-600 h4 mb-1-6"><a href="#!">{{blog.heading}}y</a></h3>
+                                <a href="#!" class="butn-read"><span>Read More</span>{{blog.description}}</a>
+                            </div>
+                            <div class="d-flex justify-content-between card-footer px-1-6 px-sm-1-9 py-3 bg-white border-color-extra-light-gray">
+                                <span class="display-30 font-weight-600"><i class="far fa-calendar-alt me-2 text-secondary"></i><a href="#!">{{blog.attr1}}</a></span>
+                                <!-- <span class="display-30 font-weight-600"><i class="far fa-comment-dots me-2 text-secondary"></i><a href="#!">06 Comments</a></span> -->
+                            </div>
+                        </article>
+                    </div>
+                    {% endfor %}
+                    <!-- <div class="col-md-6 col-lg-4 mt-1-9 wow fadeIn" data-wow-delay="400ms">
+                        <article class="card card-style3 border-color-extra-light-gray h-100">
+                            <div class="card-img">
+                                <img src="{% static 'img/blog/blog-02.jpg' %}" alt="...">
+                                <div class="author-info">
+                                    <div class="author-img">
+                                        <img src="{% static 'img/avatars/avatar-06.jpg' %}" alt="...">
+                                    </div>
+                                    <span class="display-30 text-white">By Maria Robison</span>
+                                </div>
+                            </div>
+                            <div class="card-body px-1-6 px-sm-1-9 py-2-3">
+                                <h3 class="font-weight-600 h4 mb-1-6"><a href="#!">Award distributions continue to increase</a></h3>
+                                <a href="#!" class="butn-read"><span>Read More</span></a>
+                            </div>
+                            <div class="d-flex justify-content-between card-footer px-1-6 px-sm-1-9 py-3 bg-white border-color-extra-light-gray">
+                                <span class="display-30 font-weight-600"><i class="far fa-calendar-alt me-2 text-secondary"></i><a href="#!">12 Feb.</a></span>
+                                <span class="display-30 font-weight-600"><i class="far fa-comment-dots me-2 text-secondary"></i><a href="#!">12 Comments</a></span>
+                            </div>
+                        </article>
+                    </div> -->
+
+                </div>
+            </div>
+            <img src="{% static 'img/icons/icon-10.png' %}" alt="" class="position-absolute left-5 top-15 ani-top-bottom opacity4 d-none d-lg-block">
+        </section>
+{% endblock %}

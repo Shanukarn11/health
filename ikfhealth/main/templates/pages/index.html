@@ -1,0 +1,239 @@
+
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+
+<style>
+    .headintexts{
+        color:#F15A24 !important;
+        font-family: 'Montserrat' !important;
+        font-style: normal !important;
+        font-weight: 500 !important;
+        font-size: 50px !important;
+        line-height: 61px !important;
+     
+    }
+    
+</style>
+        <!-- BANNER
+    ================================================== -->
+        {% comment %} <section class="p-0 main-banner"> {% endcomment %}
+        <section class="p-0">
+            <div class="px-lg-1-6 px-xl-2-0 px-xxl-8">
+                <div class="slider-fade owl-carousel owl-theme w-100 alt-font">
+                    {%for banner in banners%}
+
+                    <div class="text-start item bg-img cover-background pt-6 pb-14 py-md-16 py-lg-20 py-xxl-24 rounded-lg main-font" data-overlay-dark="6" data-background="{{banner.pic}}">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mb-1-9 mb-lg-0 py-5">
+                                    <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font text-animations mb-3" data-in-effect="fadeInRight">{{banner.heading}}</span>
+                                    <h1>{{banner.description}}</h1>
+                                    <a href="#!" class="butn medium">{{learn_more}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {%endfor%}
+
+
+
+
+
+                </div>
+            </div>
+        </section>
+        <!-- Placeholder Content can be added using Toggle button on top-right corner -> Using this add more content blocks on website. Just remember to change the numbering of the block content and the placeholder content.
+    ================================================== -->
+        <br />
+        <center>
+            {% comment %} {% block content %}
+                {% placeholder "content" %}
+            {% endblock content %} {% endcomment %}
+        </center>
+        
+
+        <!--lico details
+        ================================================== -->
+        <!-- <section>
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">{{lico}}</span>
+                    <h5>{{lico_madp}}</h5>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-5 mb-1-9 mb-md-2-5 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
+                        <div>
+                            <div class="section-heading  mb-3 mb-lg-4 text-start">
+                                <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">{{lico_description_title}}</span>
+                            
+                            </div>
+                            <p class="display-29 display-lg-28 font-weight-400 mb-1-6 mb-lg-2-3">{{lico_description_content}}</p>
+                            <a href="#!" class="butn small">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-xl-1">
+                        <div class="row">
+                            <div class="col-6 px-1 wow fadeInUp" data-wow-delay="400ms">
+                                <img src="{% static 'img/content/about-3.jpg' %}" class="tilt rounded" alt="...">
+                            </div>
+                            <div class="col-6 px-1 wow fadeInUp" data-wow-delay="500ms">
+                                <img src="{% static 'img/content/about-4.jpg' %}" class="tilt rounded" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="{% static 'img/icons/lico.png' %}" alt="" class="position-absolute left-5 top-15 ani-top-bottom opacity7 d-none d-lg-block">
+        </section> -->
+
+        <!-- OUR VISION
+        ================================================== -->
+        <section class="pt-0">
+            <div class="container">
+                
+                <div class="section-heading border-bottom border-color-extra-light-gray mb-1-9 pb-1-9">
+                    <span class="d-block headintexts display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">{{our_technology}}</span>
+                    <!-- <h5>{{lico_madp}}</h5> -->
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-2 order-lg-1 wow fadeIn" data-wow-delay="200ms">
+                        <div class="position-relative">
+                            <img src="{% static 'img/content/about-5.jpg' %}" class="tilt rounded" alt="...">
+
+                        </div>
+                        
+                    </div>
+                    <div class="col-lg-5 offset-xl-1 order-1 order-lg-2 mb-1-9 mb-md-2-5 mb-lg-0 wow fadeIn" data-wow-delay="400ms">
+                        <div>
+
+                            <p class="display-29 display-lg-28 mb-1-6 mb-lg-2-3">{{our_technology_details}}</p>
+                            {% comment %} <a href="#!" class="butn secondary small">Read More</a> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="{% static 'img/icons/lico.png' %}" alt="" class="position-absolute right-5 top-75 ani-top-bottom opacity7 d-none d-lg-block">
+        </section>
+
+        <section class="pt-0">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-2 order-lg-1 wow fadeIn" data-wow-delay="200ms">
+                        <div class="position-relative">
+                            <img src="{% static 'img/content/about-5.jpg' %}" class="tilt rounded" alt="...">
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="col-lg-6 order-2 order-lg-1 wow fadeIn" data-wow-delay="200ms">
+                        <div class="position-relative">
+                            <img src="{% static 'img/content/about-5.jpg' %}" class="tilt rounded" alt="...">
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <img src="{% static 'img/icons/lico.png' %}" alt="" class="position-absolute right-5 top-75 ani-top-bottom opacity7 d-none d-lg-block">
+        </section>
+
+        <!-- CALL TO ACTION
+        ================================================== -->
+        <section class="bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg wow fadeIn" data-wow-delay="200ms" style="background:rgba(241, 90, 36, 0.3);" >
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-8 text-center">
+                        <h2 class="text-white display-16 display-sm-11 display-md-9 display-lg-5 mb-1-9">{{call_to_action_text}}</h2>
+                        <a href="volunteer.html" class="butn secondary">
+                            <span>{{call_to_action_button}}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+        <!-- OUR flagship projects
+        ================================================== -->
+        <!-- OUR VISION
+        ================================================== -->
+        <section class="pt-0">
+            <div class="container">
+                
+                <div class="section-heading border-bottom border-color-extra-light-gray mb-1-9 pb-1-9">
+                    <span class="d-block headintexts display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">{{our_flagship_project}}</span>
+                    <!-- <h5>{{lico_madp}}</h5> -->
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-5 offset-xl-1 order-2 order-lg-1 mb-1-9 mb-md-2-5 mb-lg-0 wow fadeIn" data-wow-delay="400ms">
+                        <div>
+                            <h5>{{project_entity}}</h5>
+                            <p class="display-29 display-lg-28 mb-1-6 mb-lg-2-3">{{our_flagship_project_content}}</p>
+                            {% comment %} <a href="#!" class="butn secondary small">Read More</a> {% endcomment %}
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2 wow fadeIn" data-wow-delay="200ms">
+                        <div class="position-relative">
+                            <img src="{% static 'img/content/about-5.jpg' %}" class="tilt rounded" alt="...">
+
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+            <img src="{% static 'img/icons/lico.png' %}" alt="" class="position-absolute right-5 top-75 ani-top-bottom opacity7 d-none d-lg-block">
+        </section>
+
+        <section class="pt-0">
+            <div class="container">
+                {% comment %} <div class="row align-items-center"> {% endcomment %}
+                    <div class="slider-fade owl-carousel owl-theme w-100 alt-font">
+                        {%for item in projectcarousel %}
+    
+                        <div class="text-start item bg-img cover-background pt-6 pb-14 py-md-16 py-lg-20 py-xxl-24 rounded-lg main-font" data-overlay-dark="6" data-background="{{item.pic}}">
+
+                        </div>
+                        {%endfor%}
+    
+    
+    
+    
+    
+                    </div>
+            </div>
+            <img src="{% static 'img/icons/lico.png' %}" alt="" class="position-absolute right-5 top-75 ani-top-bottom opacity7 d-none d-lg-block">
+        </section>
+
+
+        <!-- CLIENTS
+    ================================================== -->
+
+   
+    <div class="section-heading border-bottom border-color-extra-light-gray mb-1-4 pb-1-9">
+        <span class="d-block headintexts display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">{{reviews_testimonials}}</span>
+        <!-- <h5>{{lico_madp}}</h5> -->
+    </div>
+    
+
+        <section class="py-5 wow fadeIn  mx-lg-4 mx-xl-6 rounded-lg" style="background:rgba(241, 90, 36, 0.3);" data-wow-delay="100ms">
+
+            <div class="container-fluid px-md-8 px-lg-10 px-xl-14" >
+
+                <div class="owl-carousel owl-theme client-style1 text-center" >
+                    {% for client in clients %}
+                    <div class="image-wrapper">
+                        <img class="hover-image" src="{{client.pic}}" alt="...">
+                        <img class="main-image" src="{{client.pic}}" alt="...">
+                    </div>
+                    {% endfor %}
+                   
+                </div>
+            </div>
+        </section>
+
+
+{% endblock %}

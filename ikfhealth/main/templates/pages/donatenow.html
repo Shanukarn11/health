@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+        <!-- PAGE TITLE
+        ================================================== -->
+        <section class="page-title-section bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4" data-background='{% static "img/banner/page-title-01.jpg" %}'>
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <h1 class="text-animation" data-in-effect="fadeInRight">Donate Now</h1>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#!">Donate Now</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="position-absolute z-index-1 right bottom-n5 opacity2 ani-left-right">
+                <span class="square bg-primary"></span>
+                <span class="square bg-secondary"></span>
+            </div>
+        </section>
+
+        <!-- DONATE NOW
+        ================================================== -->
+        <section>
+            <div class="container">
+                <div class="section-heading">
+                    <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">donate</span>
+                    <h2 class="mb-0">Donation Details</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="p-1-6 p-lg-1-9 border border-color-extra-light-gray rounded">
+                            <p class="font-weight-600 text-primary">How much would you like to donate ?</p>
+                            <form method="post" action="#!" class="donate-form mailform off2">
+                                <div class="mb-2-5">
+                                    <div class="select-amount clearfix">
+                                        <div class="select-box">
+                                            <input type="radio" name="payment-group" id="radio-one">
+                                            <label for="radio-one">$10</label>
+                                        </div>
+                                        <div class="select-box">
+                                            <input type="radio" name="payment-group" id="radio-two">
+                                            <label for="radio-two">$20</label>
+                                        </div>
+                                        <div class="select-box">
+                                            <input type="radio" name="payment-group" id="radio-three" checked="">
+                                            <label for="radio-three">$50</label>
+                                        </div>
+                                        <div class="select-box">
+                                            <input type="radio" name="payment-group" id="radio-four">
+                                            <label for="radio-four">$100</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-box">
+                                        <input type="text" name="other-payment" value="" placeholder="or Give a Custom Amount" class="mb-0">
+                                    </div>
+                                </div>
+                                <div class="mb-2-5">
+                                    <p class="font-weight-600 text-primary">Payment Method</p>
+                                    <div class="clearfix">
+                                        <div class="radio-block">
+                                            <input type="radio" id="radio-1" name="method">
+                                            <label for="radio-1">Debit card</label>
+                                        </div>
+                                        <div class="radio-block">
+                                            <input type="radio" id="radio-3" name="method">
+                                            <label for="radio-3">Offline donation</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <p class="font-weight-600 text-primary">Personal Information</p>
+                            <form action="#!">
+
+                                <div class="quform-elements">
+
+                                    <div class="row">
+
+                                        <!-- Begin Text input element -->
+                                        <div class="col-md-6">
+                                            <div class="quform-element">
+                                                <div class="quform-input">
+                                                    <input class="form-control" id="name" type="text" name="name" placeholder="First name" />
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- End Text input element -->
+
+                                        <!-- Begin Text input element -->
+                                        <div class="col-md-6">
+                                            <div class="quform-element">
+                                                <div class="quform-input">
+                                                    <input class="form-control" id="name2" type="text" name="name2" placeholder="Last name" />
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- End Text input element -->
+
+                                        <!-- Begin Text input element -->
+                                        <div class="col-md-6">
+                                            <div class="quform-element">
+                                                <div class="quform-input">
+                                                    <input class="form-control" id="email" type="text" name="email" placeholder="Email" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Text input element -->
+
+                                        <!-- Begin Text input element -->
+                                        <div class="col-md-6">
+                                            <div class="quform-element">
+                                                <div class="quform-input">
+                                                    <input class="form-control" id="phone" type="text" name="phone" placeholder="Phone" />
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- End Text input element -->
+
+                                        <!-- Begin Textarea element -->
+                                        <div class="col-md-12">
+                                            <div class="quform-element">
+                                                <div class="quform-input">
+                                                    <textarea class="form-control" id="message" name="message" rows="3" placeholder="Address"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Textarea element -->
+
+                                        <!-- Begin Submit button -->
+                                        <div class="col-md-12">
+                                            <div class="quform-submit-inner">
+                                                <button class="butn" type="submit">Donate Now</button>
+                                            </div>
+                                        </div>
+                                        <!-- End Submit button -->
+
+                                    </div>
+
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CLIENTS
+        ================================================== -->
+        <section class="py-5 wow fadeIn bg-secondary" data-wow-delay="100ms">
+            <div class="container-fluid px-md-8 px-lg-10 px-xl-14">
+                <div class="owl-carousel owl-theme client-style1 text-center">
+                    <div class="image-wrapper">
+                        <img class="hover-image" src='{% static "img/partners/01.png" alt="...">
+                        <img class="main-image" src='{% static "img/partners/01.png" alt="...">
+                    </div>
+                    <div class="image-wrapper">
+                        <img class="hover-image" src='{% static "img/partners/02.png" alt="...">
+                        <img class="main-image" src='{% static "img/partners/02.png" alt="...">
+                    </div>
+                    <div class="image-wrapper">
+                        <img class="hover-image" src='{% static "img/partners/03.png" alt="...">
+                        <img class="main-image" src='{% static "img/partners/03.png" alt="...">
+                    </div>
+                    <div class="image-wrapper">
+                        <img class="hover-image" src='{% static "img/partners/04.png" alt="...">
+                        <img class="main-image" src='{% static "img/partners/04.png" alt="...">
+                    </div>
+                    <div class="image-wrapper">
+                        <img class="hover-image" src='{% static "img/partners/05.png" alt="...">
+                        <img class="main-image" src='{% static "img/partners/05.png" alt="...">
+                    </div>
+                    <div class="image-wrapper">
+                        <img class="hover-image" src='{% static "img/partners/06.png" alt="...">
+                        <img class="main-image" src='{% static "img/partners/06.png" alt="...">
+                    </div>
+                    <div class="image-wrapper">
+                        <img class="hover-image" src='{% static "img/partners/07.png" alt="...">
+                        <img class="main-image" src='{% static "img/partners/07.png" alt="...">
+                    </div>
+                    <div class="image-wrapper">
+                        <img class="hover-image" src='{% static "img/partners/08.png" alt="...">
+                        <img class="main-image" src='{% static "img/partners/08.png" alt="...">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {% endblock %}

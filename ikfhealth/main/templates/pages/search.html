@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+        <!-- PAGE TITLE
+        ================================================== -->
+        <section class="page-title-section bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4" data-background='{% static "img/banner/page-title-01.jpg" %}'>
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <h1 class="text-animation mb-0" data-in-effect="fadeInRight">Search Results</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="position-absolute z-index-1 right bottom-n5 opacity2 ani-left-right">
+                <span class="square bg-primary"></span>
+                <span class="square bg-secondary"></span>
+            </div>
+        </section>
+
+        <!-- SEARCH RESULT
+        ================================================== -->
+        <section>
+            <div class="container">
+                <div id="search-results"></div>
+            </div>
+        </section>
+
+        {% endblock %}

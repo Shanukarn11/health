@@ -1,0 +1,385 @@
+
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- metas -->
+    <meta charset="utf-8">
+    <meta name="author" content="Chitrakoot Web" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="Nonprofit and Donation Template" />
+    <meta name="description" content="Charity - Nonprofit and Donation Template" />
+
+    <!-- title  -->
+    <title>Anant Computing</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'img/logos/favicon.png' %}" />
+    <link rel="apple-touch-icon" href="{% static 'img/logos/apple-touch-icon-57x57.png' %}" />
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/logos/apple-touch-icon-72x72.png' %}" />
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/logos/apple-touch-icon-114x114.png' %}" />
+
+    <!-- plugins -->
+    <link rel="stylesheet" href="{% static 'css/plugins.css' %}" />
+
+    <!-- search css -->
+    <link rel="stylesheet" href="{% static 'search/search.css' %}" />
+
+    <!-- quform css -->
+    <link rel="stylesheet" href="{% static 'quform/css/base.css' %}">
+
+    <!-- core style css -->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+
+    <!-- custom style css -->
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet" />
+
+    <!-- rendering CSS block -->
+ <style>
+    .anantbutton{
+position: absolute;
+left: 11.89%;
+right: 12.33%;
+top: 10.71%;
+bottom: 10.71%;
+
+/* Button */
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+letter-spacing: 0.2em;
+
+color: #FFFFFF;
+    }
+
+.fontblack{color:black !important}
+ </style>   
+</head>
+
+<body>
+    <!-- rendering CMS toolbar -->
+   
+
+    <!-- PAGE LOADING
+    ================================================== -->
+    <div id="preloader"></div>
+
+    <!-- MAIN WRAPPER
+    ================================================== -->
+    <div class="main-wrapper">
+
+        <!-- HEADER
+    ================================================== -->
+        <header class="header-style3">
+
+            <div id="top-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9 col-xs-12">
+                            <div class="top-bar-info">
+                                <ul class="ps-0">
+                                    <li><i class="ti-mobile text-secondary"></i>(+91)-22-62616620</li>
+                                    <li class="d-none d-sm-inline-block"><i class="ti-email text-secondary"></i>info@anantcomputing.in</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-3 d-none d-md-block">
+                            <ul class="top-social-icon ps-0">
+                                <li><a href="https://www.facebook.com/anantcomputing"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://twitter.com/anantcomputing"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/anantcomputing/"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/anant-computing-platform"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-default">
+
+                <!-- top search -->
+                <div class="top-search bg-primary">
+                    <div class="container">
+                        <form class="search-form" action="search.html" method="GET" accept-charset="utf-8">
+                            <div class="input-group">
+                                <span class="input-group-addon cursor-pointer">
+                                    <button class="search-form_submit fas fa-search text-white" type="submit"></button>
+                                </span>
+                                <input type="text" class="search-form_input form-control" name="s" autocomplete="off" placeholder="Type & hit enter...">
+                                <span class="input-group-addon close-search"><i class="fas fa-times mt-3"></i></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- end top search -->
+
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12">
+                            <div class="menu_area">
+                                <nav class="navbar navbar-expand-lg navbar-light p-0">
+
+                                    <div class="navbar-header navbar-header-custom">
+                                        <!-- logo -->
+                                        <a href="{% url 'home' %}" class="navbar-brand logowhite"><img id="logo" src="{% static 'img/logos/logo.png' %}" alt="logo"></a>
+                                        <!-- end logo -->
+                                    </div>
+
+                                    <div class="navbar-toggler bg-primary"></div>
+
+                                    <!-- menu area -->
+                                    <ul class="navbar-nav ms-auto mt-lg-2" id="nav" style="display: none;">
+                                      {% for item in navbar %}
+                                        <li><a href="{% url 'about' %}">{{item.name}}</a></li>
+                                      {% endfor %}
+                                        <!-- <li><a href="{% url 'about' %}">About Us</a></li>
+                                        <li>
+                                            <a href="#!">Products & Services</a>
+                                            <ul>
+                                                <li><a href="{% url 'causesgrid' %}">Causes Grid</a></li>
+                                                <li><a href="{% url 'causeslist' %}">Causes List</a></li>
+                                                <li><a href="{% url 'causesdetail' %}">Causes Detail</a></li>
+                                            </ul>
+                                        </li> -->
+
+                                        <!--<li>
+        <a href="#!">Events</a>
+        <ul>
+            <li><a href="{% static 'event-grid.html' %}">Event Grid</a></li>
+            <li><a href="{% static 'event-list.html' %}">Event List</a></li>
+            <li><a href="{% static 'event-detail.html' %}">Event Detail</a></li>
+        </ul>
+    </li>-->
+                                        <!-- <li>
+                                            <a href="#!">Blogs & Events</a>
+                                            <ul>
+                                                <li><a href="{% url 'bloggrid' %}">Blog Grid</a></li>
+                                                <li><a href="{% url 'bloglist' %}">Blog List</a></li>
+                                                <li><a href="{% url 'blogdetail' %}">Blog Detail</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#!">Press</a>
+                                            <ul>
+                                                <li><a href="{% url 'bloggrid' %}">Blog Grid</a></li>
+                                                <li><a href="{% url 'bloglist' %}">Blog List</a></li>
+                                                <li><a href="{% url 'blogdetail' %}">Blog Detail</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#!">Misc</a>
+                                            <ul>
+                                                <li><a href="{% url 'services' %}">Services</a></li>
+                                                <li><a href="{% url 'volunteer' %}">Volunteer</a></li>
+                                                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                                                <li><a href="{% url 'donatenow' %}">Donate Now</a></li>
+                                                <li><a href="{% url 'faq' %}">FAQ</a></li>
+                                                <li>
+                                                    <a href="#!">Others</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'tables' %}">Tables</a></li>
+                                                        <li><a href="{% url 'tabs' %}">Tabs And Accordions</a></li>
+                                                        <li><a href="{% static 'coming-soon.html' %}">Comingsoon</a></li>
+                                                        <li><a href="{% static 'maintenance.html' %}">Maintenance</a></li>
+                                                        <li><a href="{% static '404.html' %}">Page 404</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url 'ikf' %}">IKF</a></li>
+                                        <li><a href="{% url 'contact' %}">Contact Us</a></li> -->
+                                        
+                                    </ul>
+                                    <!-- end menu area -->
+                                    <!-- attribute navigation -->
+                                    <div class="attr-nav">
+                                        <ul>
+                                            <li class="search me-1 me-lg-0"><a href="#!"><i class="fas fa-search"></i></a></li>
+                                            <li class="d-none d-xl-inline-block"><a href="{% url 'donatenow' %}" class="butn theme small text-white">{{sign_up}}</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- end attribute navigation -->
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+     {% block content %}
+     {% endblock content %}
+     <br>
+     <br>
+     <br>
+        <footer class="bg-img cover-background"  style="background: linear-gradient(180deg, rgba(241, 90, 36, 0.08) 0%, rgba(54, 176, 228, 0.08) 100%);">
+            <div class="container">
+                <div class="row mt-n2-9">
+                    <div class="col-lg-3 col-md-6 mt-2-9 wow fadeIn" data-wow-delay="200ms">
+                        <div class="mb-1-6 w-80 w-md-60 w-lg-80">
+                            <img src="{% static 'img/logos/logo.png' %}" alt="...">
+                        </div>
+                        <p class="text-black opacity9 font-weight-300 mb-1-9">
+                            The day every Indian can use a digital device and collaborate to find
+                            solutions to their everyday problems, India will truly be able to realize its own potential. We are here to make it possible.
+                        </p>
+                        <ul class="social-icon-style2">
+                            <li><a href="https://www.facebook.com/anantcomputing"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://twitter.com/anantcomputing"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/anantcomputing/"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/anant-computing-platform"><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mt-2-9 wow fadeIn" data-wow-delay="400ms">
+                        <div class="ps-lg-1-9 ps-xl-8">
+                            <h3 class="text-secondary h5 mb-1-9">Quick Links</h3>
+                            <ul class="footer-list ps-0">
+                                <li class="pt-0 "><a href="{% static 'about.html' %}" class="text-black">About Us</a></li>
+                                <li><a href="{% static 'services.html' %}" class="text-black">Our Services</a></li>
+                                <li><a href="{% static 'volunteer.html' %}" class="text-black">Our Team</a></li>
+                                <li><a href="{% static 'contact.html' %}" class="text-black">Contact Us</a></li>
+                                <li class="pb-0"><a href="{% static 'blog-detail.html' %}">Blogs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mt-2-9 wow fadeIn" data-wow-delay="600ms">
+                        <div>
+                            <h3 class="text-secondary h5 mb-1-9">Contact Us</h3>
+                            <ul class="footer-list ps-0">
+                                <li class="pt-0">
+                                    <span class="d-inline-block align-middle"><i class="fas fa-map-marker-alt display-29"></i></span>
+                                    <span class="d-inline-block w-85 align-top text-black ps-2">Anant Computing, 306, Zenia Business Park, Hiranandani Estate, Thane West, Maharashtra 400607.</span>
+                                </li>
+                                <li>
+                                    <span class="d-inline-block align-middle"><i class="far fa-envelope display-29"></i></span>
+                                    <span class="d-inline-block w-85 align-top text-black ps-2">info@anantcomputing.in</span>
+                                </li>
+                                <li>
+                                    <span class="d-inline-block align-middle "><i class="fas fa-globe display-29"></i></span>
+                                    <span class="d-inline-block w-85 align-top text-black ps-2">www.yoursite.com</span>
+                                </li>
+                                <li class="pb-0">
+                                    <span class="d-inline-block align-middle"><i class="fas fa-phone display-29"></i></span>
+                                    <span class="d-inline-block w-85 align-top text-black ps-2">(+91)-22-25862817</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mt-2-9 wow fadeIn" data-wow-delay="800ms">
+                        <div class="ps-xl-1-6">
+                            <h3 class="text-secondary h5 mb-1-9">Trending Post</h3>
+                            <div class="media mb-1-6">
+                                <img class="me-3 rounded" src="{% static 'img/blog/blog-thumb1.jpg' %}" alt="...">
+                                <div class="media-body align-self-center">
+                                    <h4 class="h6"><a href="#!" class="text-white opacity9">Child care centers</a></h4>
+                                    <span class="small text-white opacity9">30 Comments</span>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <img class="me-3 rounded" src="{% static 'img/blog/blog-thumb2.jpg' %}" alt="...">
+                                <div class="media-body align-self-center">
+                                    <h4 class="h6"><a href="#!" class="text-white opacity9">School for poor</a></h4>
+                                    <span class="small text-white opacity9">80 Comments</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bar borders-top border-color-light-white wow fadeIn" data-wow-delay="400ms">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <p class="mb-0">&copy; 2021 Charity is Powered by <a href="#!" class="text-secondary primary-hover">Chitrakoot Web</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- start scroll to top -->
+    <a href="#!" class="scroll-to-top"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
+    <!-- end scroll to top -->
+    <!-- all js include start -->
+    <!-- jQuery -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+
+    <!-- popper js -->
+    <script src="{% static 'js/popper.min.js' %}"></script>
+
+    <!-- bootstrap -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <!-- search -->
+    <script src="{% static 'search/search.js' %}"></script>
+
+    <!-- navigation -->
+    <script src="{% static 'js/nav-menu.js' %}"></script>
+
+    <!-- tab -->
+    <script src="{% static 'js/easy.responsive.tabs.js' %}"></script>
+
+    <!-- owl carousel -->
+    <script src="{% static 'js/owl.carousel.js' %}"></script>
+
+    <!-- jquery.counterup.min -->
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+
+    <!-- stellar js -->
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+
+    <!-- waypoints js -->
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+
+    <!-- countdown js -->
+    <script src="{% static 'js/countdown.js' %}"></script>
+
+    <!-- jquery.magnific-popup js -->
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+
+    <!-- isotope.pkgd.min js -->
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+
+    <!-- lightgallery js -->
+    <script src="{% static 'js/lightgallery-all.js' %}"></script>
+
+    <!-- mousewheel js -->
+    <script src="{% static 'js/jquery.mousewheel.min.js' %}"></script>
+
+    <!-- wow js -->
+    <script src="{% static 'js/wow.js' %}"></script>
+
+    <!-- lettering js -->
+    <script src="{% static 'js/jquery.lettering.js' %}"></script>
+
+    <!-- textillate js -->
+    <script src="{% static 'js/jquery.textillate.js' %}"></script>
+
+    <!-- tilt js -->
+    <script src="{% static 'js/tilt.js' %}"></script>
+
+    <!-- custom scripts -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <!-- form plugins js -->
+    <script src="{% static 'quform/js/plugins.js' %}"></script>
+
+    <!-- form scripts js -->
+    <script src="{% static 'quform/js/scripts.js' %}"></script>
+
+    <!-- all js include end -->
+    <!-- Render js block -->
+    
+</body>
+
+</html>
