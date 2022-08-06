@@ -68,7 +68,7 @@ class TeamAdmin(admin.ModelAdmin):
 
 @admin.register(Blogs)
 class BlogsAdmin(admin.ModelAdmin):
-    list_display=('id','keydata','size','pic','name','heading','description','lang','attr1','attr2','attr3','attr4',
+    list_display=('id','keydata','size','pic','pic1','pic2','writer_name','shortDescription','heading','description_para1','description_para2','description_quote','lang','attr1','attr2','attr3','attr4',
     )
     search_fields=('id','keydata','name')
 

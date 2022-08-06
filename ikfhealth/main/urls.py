@@ -9,7 +9,7 @@ import re
 urlpatterns = [
     path("", views.home, name='home'),
     path("about", views.about, name='about'),
-    path("blogdetail", views.blogdetail, name='blogdetail'),
+    path("blogdetail/<str:id>", views.blogdetail, name='blogdetail'),
     path("bloggrid", views.bloggrid, name='bloggrid'),
     path("bloglist", views.bloglist, name='bloglist'),
     path("causesdetail", views.causesdetail, name='causesdetail'),

@@ -7,10 +7,10 @@
             <div class="container">
                 <div class="row text-center">
                     <div class="col-md-12">
-                        <h1 class="text-animation" data-in-effect="fadeInRight">Blog Detail</h1>
+                        <h1 class="text-animation" data-in-effect="fadeInRight">{{blog.heading}}</h1>
                         <ul>
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="#!">Blog Detail</a></li>
+                            <li><a href="#!"> {{blog.heading}}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -32,16 +32,16 @@
 
                             <!-- post -->
                             <div class="wow fadeIn" data-wow-delay="200ms">
-                                <img src='{% static "img/blog/blog-detail-01.jpg"%}' class="rounded" alt="...">
+                                <img src='{{blog.pic}}' class="rounded" alt="...">
                             </div>
 
                             <div class="content wow fadeIn" data-wow-delay="400ms">
                                 <div class="meta">
-                                    <h2 class="h3 mb-3">The shocking revelation of charity</h2>
+                                    <h2 class="h3 mb-3">{{blog.heading}}</h2>
                                     <ul class="meta ps-0">
                                         <li>
                                             <a href="#!">
-                                                    <i class="fa fa-user me-1 text-secondary"></i> Paul Moffitt
+                                                    <i class="fa fa-user me-1 text-secondary"></i> {{blog.writer_name}}
                                                 </a>
                                         </li>
                                         <li>
@@ -62,22 +62,22 @@
                                     </ul>
                                 </div>
                                 <div>
-                                    <p class="mb-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                                    <p class="special fst-italic">"I was amazed at the quality of charity. I didn't even need training. I like charity more and more each day because it makes my life a lot easier."</p>
+                                    <p class="mb-0">{{blog.description_para1}}</p>
+                                    <p class="special fst-italic">"{{blog.description_quote}}"</p>
                                     <div class="row mb-1-6 mb-md-1-9">
                                         <div class="col-md-6 mb-1-9 mb-md-0">
-                                            <img src='{% static "img/blog/blog-detail-02.jpg" %}' class="rounded" alt="...">
+                                            <img src='{{blog.pic1}}' class="rounded" alt="...">
                                         </div>
                                         <div class="col-md-6">
-                                            <img src='{% static "img/blog/blog-detail-03.jpg" %}' class="rounded" alt="...">
+                                            <img src='{{blog.pic2}}' class="rounded" alt="...">
                                         </div>
                                     </div>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                                    <p>{{blog.description_para2}}</p>
                                     <ul class="list-style mb-0 ps-0">
-                                        <li>Make a list of your achievements</li>
-                                        <li>Lifetime supports</li>
-                                        <li>Give yourself the power of responsibility</li>
-                                        <li class="mb-0">We Provide Awesome Services</li>
+                                        <li>{{blog.bullet_point_1}}</li>
+                                        <li>{{blog.bullet_point_2}}</li>
+                                        <li>{{blog.bullet_point_3}}</li>
+                                        <li class="mb-0">{{blog.bullet_point_4}}</li>
                                     </ul>
                                 </div>
 
@@ -87,9 +87,9 @@
                                         <div class="tags">
                                             <h6 class="mb-3">Related Tags</h6>
                                             <ul class="tags ps-0">
-                                                <li><a href="#!">Fund</a></li>
-                                                <li><a href="#!">Medical</a></li>
-                                                <li><a href="#!">Food</a></li>
+                                                <li><a href="#!">{{blog.tag1}}</a></li>
+                                                <li><a href="#!">{{blog.tag2}}</a></li>
+                                                <li><a href="#!">{{blog.tag3}}</a></li>
                                             </ul>
                                         </div>
                                     </div>

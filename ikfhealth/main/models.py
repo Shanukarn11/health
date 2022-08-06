@@ -110,10 +110,33 @@ class Blogs(models.Model):
     size=models.CharField(max_length=100,null=True,blank=True)
     pic = models.ImageField(
         storage=OverwriteStorage(), upload_to='courses',null=True,blank=True)
-    name=models.CharField(max_length=200, null=True,blank=True,)
+    pic1 = models.ImageField(
+        storage=OverwriteStorage(), upload_to='courses',null=True,blank=True)
+    pic2 = models.ImageField(
+        storage=OverwriteStorage(), upload_to='courses',null=True,blank=True)
+    writer_name=models.CharField(max_length=200, null=True,blank=True,)
+    
     heading=models.CharField(max_length=200, null=True,blank=True,)
+    shortDescription=models.TextField(null=True,blank=True)
 
-    description=models.TextField(null=True,blank=True)
+
+    description_para1=models.TextField(null=True,blank=True)
+    description_para2=models.TextField(null=True,blank=True)
+    description_quote=models.TextField(null=True,blank=True)
+    tag1=models.TextField(null=True,blank=True,max_length=100)
+    tag2=models.TextField(null=True,blank=True,max_length=100)
+    tag3=models.TextField(null=True,blank=True,max_length=100)
+    bullet_point_1=models.TextField(null=True,blank=True)
+    bullet_point_2=models.TextField(null=True,blank=True)
+    bullet_point_3=models.TextField(null=True,blank=True)
+    bullet_point_4=models.TextField(null=True,blank=True)
+    
+
+
+
+
+
+
     lang=models.ForeignKey(
         Lang, null=True, verbose_name="language21", on_delete=models.SET_NULL, db_index=True)
     attr1=models.CharField(max_length=200, null=True,blank=True,)

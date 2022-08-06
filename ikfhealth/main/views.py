@@ -5,8 +5,9 @@ import glob
 import subprocess
 import time
 from tracemalloc import Statistic
+from turtle import heading
 from uuid import uuid1
-import PIL
+import PIL    
 from django.core import serializers
 
 import datetime
@@ -46,6 +47,8 @@ def home(request):
     context['clients']=Clients.objects.filter(lang=lang).values() 
     context['testimonials']=Testimonials.objects.filter(lang=lang).values() 
     context['navbar']=Navbar.objects.filter(lang=lang).values() 
+    context['blogs']=Blogs.objects.filter(lang=lang).values()
+    
     
     return render(request, 'pages/index.html', context)
      
@@ -55,9 +58,16 @@ def about(request):
     return render(request, 'pages/about.html', context)
 
 
-def blogdetail(request):
+def blogdetail(request,id):
     lang='en'
     context=pagelabel(lang)
+    blogs=Blogs.objects.filter(lang=lang,heading=id).values()
+    for i in blogs:
+        blog=i
+    
+
+    
+    context['blog']=blog
     return render(request, 'pages/blogdetail.html', context)
 
 def bloggrid(request):
