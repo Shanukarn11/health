@@ -61,12 +61,9 @@ def about(request):
 def blogdetail(request,id):
     lang='en'
     context=pagelabel(lang)
-    blogs=Blogs.objects.filter(lang=lang,heading=id).values()
-    for i in blogs:
-        blog=i
-    
+    blog=list(Blogs.objects.filter(lang=lang,heading=id).values())[0]
 
-    
+
     context['blog']=blog
     return render(request, 'pages/blogdetail.html', context)
 
