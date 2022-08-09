@@ -4,7 +4,7 @@ from django.contrib import admin
 from django.contrib import messages
 import csv
 from django.http import HttpResponse
-from .models import MasterLabels,Addressdata,Navbar,Course,Lang, ProjectCarousel,Services,Events,Team,Blogs,HomeBanner,HomeImages,Statics,Clients,Testimonials
+from .models import MasterLabels,Addressdata,Navbar,Course,Lang, ProjectCarousel,Services,Events,Team,Blogs,HomeBanner,HomeImages,Statics,Clients,Testimonials,Videos
 def export_as_csv(self, request, queryset):
     
     meta = self.model._meta
@@ -69,6 +69,11 @@ class TeamAdmin(admin.ModelAdmin):
 @admin.register(Blogs)
 class BlogsAdmin(admin.ModelAdmin):
     list_display=('id','keydata','size','pic','pic1','pic2','writer_name','shortDescription','heading','description_para1','description_para2','description_quote','lang','attr1','attr2','attr3','attr4',
+    )
+    search_fields=('id','keydata','name')
+@admin.register(Videos)
+class VideosAdmin(admin.ModelAdmin):
+    list_display=('id','keydata','title','link','shortDescription'
     )
     search_fields=('id','keydata','name')
 

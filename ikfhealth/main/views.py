@@ -14,7 +14,7 @@ import datetime
 from django.shortcuts import render, redirect
 from django.conf import settings
 from django.http import HttpResponse, Http404, JsonResponse
-from .models import Course, HomeBanner, HomeImages, MasterLabels, Navbar, ProjectCarousel,Statics,Services,Events,Team,Blogs,Clients,Testimonials
+from .models import Course, HomeBanner, HomeImages, MasterLabels, Navbar, ProjectCarousel,Statics,Services,Events,Team,Blogs,Clients,Testimonials,Videos
 
 def pagelabel(lang):
     
@@ -48,6 +48,14 @@ def home(request):
     context['testimonials']=Testimonials.objects.filter(lang=lang).values() 
     context['navbar']=Navbar.objects.filter(lang=lang).values() 
     context['blogs']=Blogs.objects.filter(lang=lang).values()
+    video=Videos.objects.all()
+    for v in video:
+        link=v.link
+        equal=v.link.find('=')
+        v.link=v.link[equal+1:]
+    context['videos']=video
+    
+
     
     
     return render(request, 'pages/index.html', context)

@@ -143,7 +143,17 @@ class Blogs(models.Model):
     attr2=models.CharField(max_length=200, null=True,blank=True, )
     attr3=models.CharField(max_length=200, null=True,blank=True, )
     attr4=models.CharField(max_length=200, null=True,blank=True, )
+class Videos(models.Model):
+    id = models.BigAutoField(primary_key=True, db_index=True)
+    keydata=models.CharField(max_length=200, null=True, db_index=True)
+    title=models.CharField(max_length=200, null=True,blank=True,)
+    
+    link=models.CharField( max_length=20000,null=True,blank=True,)
+    shortDescription=models.TextField(null=True,blank=True)
 
+
+    
+    
 class HomeBanner(models.Model):
     id = models.BigAutoField(primary_key=True, db_index=True)
     keydata=models.CharField(max_length=200, null=True, db_index=True)
