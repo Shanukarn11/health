@@ -9,6 +9,7 @@ from turtle import heading
 from uuid import uuid1
 import PIL    
 from django.core import serializers
+from .forms import MyForm
 
 import datetime
 from django.shortcuts import render, redirect
@@ -33,6 +34,16 @@ def home(request):
     dictvar=dict()
     for img in homeimages:
         dictvar[img['keydata']]=img['pic']
+    context['form']= MyForm()
+    if request.method == "POST":
+        form = MyForm(request.POST)
+        name=form.cleaned_data['name']
+        print(name)
+
+        if form.is_valid():
+            form.save()
+    else:
+      form = MyForm()
         
     context['courses']=Course.objects.filter(lang=lang).values()
     context['banners']=HomeBanner.objects.filter(lang=lang).values()

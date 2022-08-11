@@ -1,5 +1,6 @@
 
 
+from email import message
 from django.db import models
 # from .storage import OverwriteStorage
 from PIL import Image
@@ -122,6 +123,22 @@ class Blogs(models.Model):
 
     description_para1=models.TextField(null=True,blank=True)
     description_para2=models.TextField(null=True,blank=True)
+    description_para3=models.TextField(null=True,blank=True)
+
+    description_para3=models.TextField(null=True,blank=True)
+    description_para4=models.TextField(null=True,blank=True)
+    description_para5=models.TextField(null=True,blank=True)
+    description_para6=models.TextField(null=True,blank=True)
+    description_para7=models.TextField(null=True,blank=True)
+    description_para8=models.TextField(null=True,blank=True)
+    description_para9=models.TextField(null=True,blank=True)
+    description_para10=models.TextField(null=True,blank=True)
+    description_para11=models.TextField(null=True,blank=True)
+    description_para12=models.TextField(null=True,blank=True)
+
+
+
+
     description_quote=models.TextField(null=True,blank=True)
     tag1=models.TextField(null=True,blank=True,max_length=100)
     tag2=models.TextField(null=True,blank=True,max_length=100)
@@ -260,3 +277,12 @@ class Navbar(models.Model):
     attr2=models.CharField(max_length=200, null=True,blank=True, )
     attr3=models.CharField(max_length=200, null=True,blank=True, )
     attr4=models.CharField(max_length=200, null=True,blank=True, )
+
+class ContactUS(models.Model):
+    id = models.BigAutoField(primary_key=True, db_index=True)
+    keydata = models.CharField(max_length=200, null=True, db_index=True ,blank=True)
+    name=models.TextField(null=True,blank=True)
+    mail=models.TextField(null=True,blank=True)
+    subject=models.TextField(null=True,blank=True)
+    contactNo=models.TextField(null=True,blank=True)
+    message=models.TextField(null=True,blank=True)
