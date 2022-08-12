@@ -28,9 +28,14 @@
                         <div class="container">
                             <div class="row align-items-center">
                                 <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mb-1-9 mb-lg-0 py-5">
-                                    <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font text-animations mb-3" data-in-effect="fadeInRight">{{banner.heading}}</span>
+                                    <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font text-animations mb-3" data-in-effect="fadeInRight">                                        {% if banner.heading == None %}
+
+                                        {% else %}
+                                        {{banner.heading}}
+                                        {% endif %}
+                                    </span>
                                     <h1>{{banner.description}}</h1>
-                                    <a href="#!" class="butn medium">{{learn_more}}</a>
+                                    <!-- <a href="#!" class="butn medium">{{learn_more}}</a> -->
                                 </div>
                             </div>
                         </div>
@@ -97,8 +102,8 @@
         <section>
             <div class="container">
                 <div class="section-heading">
-                    <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">Our Blogs</span>
-                    <h2>Latest news</h2>
+                    <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">{{our_blogs}}</span>
+                    <h2>{{latest_blogs}}</h2>
                 </div>
                 <div class="row mt-n1-9">
                    
@@ -213,146 +218,43 @@
 
 
 <!-- contact us -->
-<section>
-    <div class="container">
-        <div class="section-heading">
-            <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">contact us</span>
-            <h2>Get in touch</h2>
-        </div>
-        <div class="row mb-1-9 mb-md-6 wow fadeIn" data-wow-delay="200ms">
-            <div class="col-lg-12">
-                <div class="p-1-6 p-lg-1-9 p-xl-2-5 border border-color-extra-light-gray rounded">
-                    <form class="quform"  method="post"  onclick="">
-                        {% csrf_token %}
+        <!-- CONTACT INFO
+        ================================================== -->
+        <section>
+            <div class="container">
+                <div class="section-heading">
+                    <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">{{registration_heading}}</span>
+                  <h2>Get in touch</h2> 
+                </div>
 
-                        <div class="quform-elements">
-
-                            <div class="row">
-
-                                <!-- Begin Text input element -->
-                                <div class="col-md-6">
-                                    <div class="quform-element">
-                                        <label >Your Name <span class="quform-required">*</span></label>{{form.name}}
-
-                                        <div class="quform-input">
-                                            <input class="form-control" id="name" type="text" name="name" placeholder="Your name here" />
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <!-- End Text input element -->
-
-                                <!-- Begin Text input element -->
-                                <div class="col-md-6">
-                                    <div class="quform-element">
-                                        <label for="email">Your Email <span class="quform-required">*</span></label>
-                                        <div class="quform-input">
-                                            <input class="form-control" id="email" type="text" name="email" placeholder="Your email here" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Text input element -->
-
-                                <!-- Begin Text input element -->
-                                <div class="col-md-6">
-                                    <div class="quform-element">
-                                        <label for="subject">Your Subject <span class="quform-required">*</span></label>
-                                        <div class="quform-input">
-                                            <input class="form-control" id="subject" type="text" name="subject" placeholder="Your subject here" />
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <!-- End Text input element -->
-
-                                <!-- Begin Text input element -->
-                                <div class="col-md-6">
-                                    <div class="quform-element">
-                                        <label for="phone">Contact Number</label>
-                                        <div class="quform-input">
-                                            <input class="form-control" id="phone" type="text" name="phone" placeholder="Your phone here" />
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <!-- End Text input element -->
-
-                                <!-- Begin Textarea element -->
-                                <div class="col-md-12">
-                                    <div class="quform-element">
-                                        <label for="message">Message <span class="quform-required">*</span></label>
-                                        <div class="quform-input">
-                                            <textarea class="form-control" id="message" name="message" rows="3" placeholder="Tell us a few words"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Textarea element -->
-
-                                <!-- Begin Captcha element -->
-                                <div class="col-md-12">
-                                    <div class="quform-element">
-                                        <div class="form-group">
-                                            <div class="quform-input">
-                                                <input class="form-control" id="type_the_word" type="text" name="type_the_word" placeholder="Type the below word" />
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="quform-captcha">
-                                                <div class="quform-captcha-inner">
-                                                    <img src='{% static "quform/images/captcha/courier-new-light.png" %}' alt="...">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Captcha element -->
-
-                                <!-- Begin Submit button -->
-                                <div class="col-md-12">
-                                    <div class="quform-submit-inner">
-                                        <button class="butn" type="submit">Send Message</button>
-                                    </div>
-                                    <div class="quform-loading-wrap text-start"><span class="quform-loading"></span></div>
-                                </div>
-                                <!-- End Submit button -->
-
-                            </div>
-
+                <div class="row mt-n1-6">
+                    <div class="col-md-6 col-lg-4 mt-1-6 wow fadeIn" data-wow-delay="200ms">
+                        <div class="p-1-6 text-center border border-color-extra-light-gray rounded h-100">
+                            <i class="fas fa-mobile-alt display-18 mb-1-6 text-primary"></i>
+                            <h3 class="h5 mb-3">Call us</h3>
+                            <span class="d-block mb-2">{{mobile_code}} {{mobile_number}}</span>
+                            <span>{{std_code}} {{landline_number}}</span>
                         </div>
-
-                    </form>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mt-1-6 wow fadeIn" data-wow-delay="400ms">
+                        <div class="p-1-6 text-center border border-color-extra-light-gray rounded h-100">
+                            <i class="fas fa-map-marker-alt display-18 mb-1-6 text-primary"></i>
+                            <h3 class="h5 mb-3">{{visit_us}}</h3>
+                            <span class="d-block mb-2">{{address_line_1}}</span>
+                            <span>{{address_line_2}}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mt-1-6 wow fadeIn" data-wow-delay="600ms">
+                        <div class="p-1-6 text-center border border-color-extra-light-gray rounded h-100">
+                            <i class="far fa-envelope display-18 mb-1-6 text-primary"></i>
+                            <h3 class="h5 mb-3">Mail us</h3>
+                            <span class="d-block mb-2">{{email2}}</span>
+                            <span>{{email}}</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row mt-n1-6">
-            <div class="col-md-6 col-lg-4 mt-1-6 wow fadeIn" data-wow-delay="200ms">
-                <div class="p-1-6 text-center border border-color-extra-light-gray rounded h-100">
-                    <i class="fas fa-mobile-alt display-18 mb-1-6 text-primary"></i>
-                    <h3 class="h5 mb-3">Call us</h3>
-                    <span class="d-block mb-2">(+44) 123 456 789</span>
-                    <span>+ (124) 1523-567-9874</span>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mt-1-6 wow fadeIn" data-wow-delay="400ms">
-                <div class="p-1-6 text-center border border-color-extra-light-gray rounded h-100">
-                    <i class="fas fa-map-marker-alt display-18 mb-1-6 text-primary"></i>
-                    <h3 class="h5 mb-3">Visit us</h3>
-                    <span class="d-block mb-2">74 Guild Street</span>
-                    <span>North Town MT.</span>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mt-1-6 wow fadeIn" data-wow-delay="600ms">
-                <div class="p-1-6 text-center border border-color-extra-light-gray rounded h-100">
-                    <i class="far fa-envelope display-18 mb-1-6 text-primary"></i>
-                    <h3 class="h5 mb-3">Mail us</h3>
-                    <span class="d-block mb-2">info@youradress.com</span>
-                    <span>email@youradress.com</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
+        </section>
 
 <!-- contact us end  -->
 
@@ -452,13 +354,10 @@
     ================================================== -->
 
    
-    <div class="section-heading border-bottom border-color-extra-light-gray mb-1-4 pb-1-9">
-        <span class="d-block headintexts display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">{{reviews_testimonials}}</span>
-        <!-- <h5>{{lico_madp}}</h5> -->
-    </div>
+
     
 
-        <section class="py-5 wow fadeIn  mx-lg-4 mx-xl-6 rounded-lg" style="background:rgba(241, 90, 36, 0.3);" data-wow-delay="100ms">
+        <!-- <section class="py-5 wow fadeIn  mx-lg-4 mx-xl-6 rounded-lg" style="background:rgba(241, 90, 36, 0.3);" data-wow-delay="100ms">
 
             <div class="container-fluid px-md-8 px-lg-10 px-xl-14" >
 
@@ -472,7 +371,7 @@
                    
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
 {% endblock %}

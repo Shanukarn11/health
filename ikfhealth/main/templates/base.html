@@ -16,7 +16,7 @@
     <meta name="description" content="Charity - Nonprofit and Donation Template" />
 
     <!-- title  -->
-    <title>Anant Computing</title>
+    <title>{{title}}</title>
 
     <!-- favicon -->
     <link rel="shortcut icon" href="{% static 'img/logos/favicon.png' %}" />
@@ -90,8 +90,8 @@ color: #FFFFFF;
                         <div class="col-md-9 col-xs-12">
                             <div class="top-bar-info">
                                 <ul class="ps-0">
-                                    <li><i class="ti-mobile text-secondary"></i>(+91)-22-62616620</li>
-                                    <li class="d-none d-sm-inline-block"><i class="ti-email text-secondary"></i>info@anantcomputing.in</li>
+                                    <li><i class="ti-mobile text-secondary"></i>{{mobile_code}}-{{phone_number}}</li>
+                                    <li class="d-none d-sm-inline-block"><i class="ti-email text-secondary"></i>{{email}}</li>
                                 </ul>
                             </div>
                         </div>
@@ -204,12 +204,12 @@ color: #FFFFFF;
                                     </ul>
                                     <!-- end menu area -->
                                     <!-- attribute navigation -->
-                                    <div class="attr-nav">
+                                    <!-- <div class="attr-nav">
                                         <ul>
                                             <li class="search me-1 me-lg-0"><a href="#!"><i class="fas fa-search"></i></a></li>
                                             <li class="d-none d-xl-inline-block"><a href="{% url 'donatenow' %}" class="butn theme small text-white">{{sign_up}}</a></li>
                                         </ul>
-                                    </div>
+                                    </div> -->
                                     <!-- end attribute navigation -->
                                 </nav>
                             </div>
@@ -224,7 +224,7 @@ color: #FFFFFF;
      <br>
      <br>
      <br>
-        <footer class="bg-img cover-background"  style="background: linear-gradient(180deg, rgba(241, 90, 36, 0.08) 0%, rgba(54, 176, 228, 0.08) 100%);">
+        <!-- <footer class="bg-img cover-background"  style="background: linear-gradient(180deg, rgba(241, 90, 36, 0.08) 0%, rgba(54, 176, 228, 0.08) 100%);">
             <div class="container">
                 <div class="row mt-n2-9">
                     <div class="col-lg-3 col-md-6 mt-2-9 wow fadeIn" data-wow-delay="200ms">
@@ -305,7 +305,7 @@ color: #FFFFFF;
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer> -->
 
     </div>
 
