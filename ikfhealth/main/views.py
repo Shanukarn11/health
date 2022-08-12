@@ -4,8 +4,7 @@ import json
 import glob
 import subprocess
 import time
-from tracemalloc import Statistic
-from turtle import heading
+
 from uuid import uuid1
 import PIL    
 from django.core import serializers
