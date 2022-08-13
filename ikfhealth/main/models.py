@@ -163,6 +163,8 @@ class Blogs(models.Model):
 class Videos(models.Model):
     id = models.BigAutoField(primary_key=True, db_index=True)
     keydata=models.CharField(max_length=200, null=True, db_index=True)
+    pic = models.ImageField(
+        storage=OverwriteStorage(), upload_to='courses',null=True,blank=True)
     title=models.CharField(max_length=200, null=True,blank=True,)
     
     link=models.CharField( max_length=20000,null=True,blank=True,)
@@ -286,3 +288,12 @@ class ContactUS(models.Model):
     subject=models.TextField(null=True,blank=True)
     contactNo=models.TextField(null=True,blank=True)
     message=models.TextField(null=True,blank=True)
+
+class SocialMediaLink(models.Model):
+    id = models.BigAutoField(primary_key=True, db_index=True)
+    keydata=models.CharField(max_length=200, null=True, db_index=True)
+
+    name=models.CharField(max_length=200, null=True,blank=True,)
+    urlitem=models.CharField(max_length=200, null=True,blank=True,)
+    lang=models.ForeignKey(
+        Lang, null=True, verbose_name="language21", on_delete=models.SET_NULL, db_index=True)
